@@ -14,5 +14,5 @@ async def sse_counter():
         await asyncio.sleep(1)
         yield {"count": i}
 
-if __name__ == "__main__":
-    app.run(transport="sse",)
+# if __name__ == "__main__":
+#     app.run(transport="sse",)

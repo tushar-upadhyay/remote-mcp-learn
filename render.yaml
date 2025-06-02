@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: my-python-server
+    env: python
+    buildCommand: |
+      curl -Ls https://astral.sh/uv/install.sh | sh
+      uv pip install --system
+    startCommand: uvicorn main:app
+    plan: free
+    autoDeploy: true
